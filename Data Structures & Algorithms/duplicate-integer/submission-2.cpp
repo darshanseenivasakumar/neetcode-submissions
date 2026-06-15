@@ -1,13 +1,13 @@
 class Solution {
 public:
-    vector<int> getConcatenation(vector<int>& nums) {
-        vector<int> mainlist;
-        for(int i = 0;i<nums.size();i++){
-            mainlist.push_back(nums[i]);
+    bool hasDuplicate(vector<int>& nums) {
+       unordered_set<int> hashed(nums.begin(),nums.end());
+       int n = nums.size();
+        int m = hashed.size();
+        if(n == m){
+            return false;
         }
-        for(int i = 0;i<nums.size();i++){
-            mainlist.push_back(nums[i]);
-        }
-        return mainlist;
+        return true;
+      
     }
 };
